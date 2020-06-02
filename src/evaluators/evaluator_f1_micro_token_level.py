@@ -16,8 +16,8 @@ class EvaluatorF1MicroTokenLevel(EvaluatorBase):
                 if t == "O":
                     fp += 1
                     continue
-                if o == "O"
-                    fn + = 1
+                if o == "O":
+                    fn += 1
                     continue
                     
                 fn +=1 #different labels
