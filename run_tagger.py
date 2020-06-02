@@ -21,7 +21,7 @@ if __name__ == "__main__":
                         help='Evaluation method.',
                         choices=['f1-connl', 'f1-alpha-match-10',
                                  'f1-alpha-match-05', 'f1-macro', 'f05-macro',
-                                 'token-acc'])
+                                 'token-acc', 'f1-micro-token'])
     parser.add_argument('--gpu', '-g', type=int, default=0,
                         help='GPU device number, 0 by default, -1 means CPU.')
     print('Start run_tagger.py.')

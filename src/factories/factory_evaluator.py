@@ -5,6 +5,7 @@ from src.evaluators.evaluator_f1_micro_spans_alpha_match_05 import EvaluatorF1Mi
 from src.evaluators.evaluator_f1_macro_token_level import EvaluatorF1MacroTokenLevel
 from src.evaluators.evaluator_f05_macro_token_level import EvaluatorF05MacroTokenLevel
 from src.evaluators.evaluator_acc_token_level import EvaluatorAccuracyTokenLevel
+from src.evaluators.evaluator_f1_micro_token_level import EvaluatorF1MicroTokenLevel
 
 
 class EvaluatorFactory():
@@ -23,5 +24,7 @@ class EvaluatorFactory():
             return EvaluatorF05MacroTokenLevel()
         elif args.evaluator == 'token-acc':
             return EvaluatorAccuracyTokenLevel()
+        elif args.evaluator == 'f1-micro-token':
+            return EvaluatorF1MicroTokenLevel()
         else:
             raise ValueError('Unknown evaluator %s.' % args.evaluator)
